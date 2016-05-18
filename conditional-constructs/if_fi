@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+  echo "Usage: if_fi   num-1  num-2"
+  exit 1
+fi
+
+if [ $1 -gt $2 ]; then
+  echo "$1 > $2"
+fi
