@@ -1,0 +1,2 @@
+let abc=21*2
+echo $abc
