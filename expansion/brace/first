@@ -1,0 +1,23 @@
+#!/bin/bash
+for expanded in {one,two,three} {foo,bar}; do
+    echo $expanded
+done
+# one
+# two
+# three
+# foo
+# bar
+
+echo
+
+for expanded in {1,2,3}-{a,b}; do
+    echo $expanded
+done
+# 1-a
+# 1-b
+# 2-a
+# 2-b
+# 3-a
+# 3-b
+
+echo

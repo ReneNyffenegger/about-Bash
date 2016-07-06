@@ -1,0 +1,4 @@
+#!/bin/bash
+
+X=$(echo This directory contains $(ls -1a | wc -l) files)
+echo $X

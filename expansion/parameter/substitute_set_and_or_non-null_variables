@@ -1,0 +1,42 @@
+# Substitution might occur in the form ${VAR-SUBST} or ${VAR:-SUBST}
+
+var1=foo
+nullVar1=
+
+# Substitute if null or undefined {
+
+#    first batch: with colon {
+#   (substitue if set and non-null)
+
+echo ${var1:+abc}
+# abc
+
+echo ${nullVar1:+def}
+# 
+
+echo ${unset1:+ghi}
+# 
+
+# }
+
+echo ----------
+
+
+#    second batch: without colon {
+#   (substitue if set)
+
+var2=foo
+nullVar2=
+
+echo ${var2+jkl}
+# jkl
+
+echo ${nullVar2+mno}
+# mno
+
+echo ${unset2+pqr}
+#
+
+# }
+
+# }

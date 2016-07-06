@@ -1,0 +1,8 @@
+#!/bin/bash
+
+var="foo bar baz"
+echo ${var/a*/REPLACED}
+# foo bREPLACED
+
+echo $var
+# foo bar baz

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# mnemonic: # is on the left, % on the right side of the $ key.
+# hence # deletes from the left, % from the right side.
+
+var="foo bar baz"
+
+# delete shortest possible match from the left
+echo ${var#*a}
+# r baz
+
+# delete longest possible match from the left
+echo ${var##*a}
+# z
+
+# delete shortest possible match from the right
+echo ${var%a*}
+# foo bar b
+
+# delete longest possible match from the right
+echo ${var%%a*}
+# foo b
+
+

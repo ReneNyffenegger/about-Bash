@@ -1,0 +1,54 @@
+# Assignment might occur in the form ${VAR=VALUE} or ${VAR:=VALUE}
+
+var1=foo
+nullVar1=
+
+# Substitute if null or undefined {
+
+#    first batch: with colon {
+#   (assign if not set or null)
+
+echo ${var1:=abc}
+# foo
+echo $var1
+# foo
+
+echo ${nullVar1:=def}
+# def 
+echo $nullVar1
+# def
+
+echo ${unset1:=ghi}
+# ghi
+echo $unset1
+# ghi
+
+# }
+
+echo
+
+#    second batch: without colon {
+#   (assign if not set)
+
+var2=bar
+nullVar2=
+
+
+echo ${var2=jkl}
+# bar
+echo $var2
+# bar
+
+echo ${nullVar2=mno}
+#
+echo $nullVar2
+#
+
+echo ${unset2=pqr}
+# pqr
+echo $unset2
+# pqr
+
+# }
+
+# }

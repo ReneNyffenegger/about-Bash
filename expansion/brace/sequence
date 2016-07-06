@@ -1,0 +1,31 @@
+#!/bin/bash
+
+for expanded in {1..5}; do
+  echo $expanded
+done
+# 1
+# 2
+# 3
+# 4
+# 5
+
+echo
+
+for expanded in {d..h}; do
+  echo $expanded
+done
+# d
+# e
+# f
+# g
+# h
+
+echo
+
+# Variables can't be used, they're expanded later...
+s=1
+e=5
+for expanded in {$s..$e}; do
+  echo $expanded
+done
+# {1..5}

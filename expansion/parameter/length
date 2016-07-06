@@ -1,0 +1,5 @@
+#!/bin/bash
+
+string="12345678"
+echo ${#string}
+# 8

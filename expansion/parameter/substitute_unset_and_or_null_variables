@@ -1,0 +1,40 @@
+# Substitution might occur in the form ${VAR-SUBST} or ${VAR:-SUBST}
+
+var=foo
+nullVar=
+
+# Substitute if null or undefined {
+
+#    first batch: with colon {
+#   (substitue if not set or null)
+
+echo ${var:-abc}
+# foo
+
+echo ${nullVar:-def}
+# def 
+
+echo ${unset:-ghi}
+# ghi
+
+# }
+#    second batch: without colon {
+#   (subsitue if not set)
+
+echo ${var-jkl}
+# foo
+
+echo ${nullVar-mno}
+#
+
+echo ${unset-pqr}
+# pqr
+
+# }
+
+# }
+
+
+# The following line is written to std err
+exit_program=${unset?Exit the program because \'unset\' is not set}
+echo "This line is not printed..."

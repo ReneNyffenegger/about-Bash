@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in preamble{foo,bar,baz}; do
+  echo $i
+done
+# preamblefoo
+# preamblebar
+# preamblebaz

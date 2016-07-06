@@ -1,0 +1,25 @@
+#!/bin/bash
+
+zeroToNine=0123456789
+
+echo ${zeroToNine:0}
+# 0123456789
+
+echo ${zeroToNine:7}
+# 789
+
+echo ${zeroToNine:5:4}
+# 5678
+
+echo ${zeroToNine: -3}
+# 789
+
+echo ${zeroToNine: -6: 2}
+# 45
+
+echo ${zeroToNine: -4:-1}
+# 678
+
+array=(0 1 2 3 4 5 6 7 8 9)
+echo ${array[@]:4:3}
+# 4 5 6

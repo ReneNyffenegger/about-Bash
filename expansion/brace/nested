@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in {foo-{one,two},bar-{x,y}}; do
+  echo $i
+done
+# foo-one
+# foo-two
+# bar-x
+# bar-y
