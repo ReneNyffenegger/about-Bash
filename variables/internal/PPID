@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo '$$:  '  $$
+echo '$PPID:' $PPID
+
+ps -ef | grep $$
