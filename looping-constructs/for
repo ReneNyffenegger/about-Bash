@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# call with something like
+#    ./for one two three
+
+
+func() {
+
+  echo
+  echo "In func:"
+  for arg; do
+    echo "  $arg"
+  done
+}
+
+echo "Iterating of script parameters"
+for arg; do
+  echo "  $arg"
+done
+
+func foo bar baz
