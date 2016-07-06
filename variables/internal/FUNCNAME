@@ -1,0 +1,15 @@
+#!/bin/bash
+
+baz() {
+  echo "$FUNCNAME was called"
+}
+bar() {
+  echo "$FUNCNAME was called"
+  baz
+}
+foo() {
+  echo "$FUNCNAME was called"
+  bar
+}
+
+foo
