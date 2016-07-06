@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Path to the bash binary is:" $BASH
