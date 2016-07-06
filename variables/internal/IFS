@@ -1,0 +1,41 @@
+#!/bin/bash
+
+echo ">$IFS<"
+
+echo
+
+echo $IFS | cat -vte
+
+# -------------
+
+echo
+var_plus='foo+bar+baz'
+var_minus='foo-bar-baz'
+
+IFS=+
+
+echo $var_plus
+echo $var_minus
+
+IFS=-
+
+echo $var_plus
+echo $var_minus
+
+# -------------
+
+echo
+
+IFS=:
+
+for word in "one:two::three"; do
+   printf "word: %s\n" $word
+done
+
+echo
+
+IFS=" "
+
+for word in "abc def  ghijk"; do
+   printf "word: %s\n" $word
+done
