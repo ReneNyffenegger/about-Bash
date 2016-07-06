@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "PWD   :" $PWD
+echo "OLDPWD:" $OLDPWD
+
+cd ..
+echo
+echo "PWD   :" $PWD
+echo "OLDPWD:" $OLDPWD
+
+cd ..
+echo
+echo "PWD   :" $PWD
+echo "OLDPWD:" $OLDPWD
