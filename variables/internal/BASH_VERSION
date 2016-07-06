@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Compare with ./BASH_VERSINFO
+
+echo $BASH_VERSION
