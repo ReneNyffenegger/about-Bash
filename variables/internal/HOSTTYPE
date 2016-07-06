@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo '$HOSTTYPE: ' $HOSTTYPE
+echo "see also \$MACHTYPE ($MACHTYPE)"
