@@ -1,0 +1,11 @@
+#!/bin/bash
+
+printf "%${SHLVL}s\n" $SHLVL
+
+if [ $SHLVL -ge 10 ]; then
+  echo "          SHLVL has reached 10, not recursing anymore"
+else
+  ./SHLVL
+fi
+
+printf "%${SHLVL}s\n" $SHLVL
