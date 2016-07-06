@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo '$$:      ' $$
+echo '$BASHPID:' $BASHPID
+
+
+(
+  echo
+  echo "Subshell..."
+  echo '$$:      ' $$
+  echo '$BASHPID:' $BASHPID
+
+  ps -ef | grep $BASHPID
+)
