@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+func() {
+
+  echo "I am in $FUNCNAME @ $LINENO"
+
+}
+
+echo "Line: $LINENO"
+
+func
+
+echo "Line: $LINENO"
