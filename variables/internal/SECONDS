@@ -1,0 +1,11 @@
+func() {
+  echo "This script has been running since $SECONDS second(s)"
+}
+
+func
+sleep 1
+func
+sleep 2
+func
+sleep 3
+func
