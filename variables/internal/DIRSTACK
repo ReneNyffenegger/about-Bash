@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo
+echo $DIRSTACK
+
+pushd .. > /dev/null
+echo
+echo $DIRSTACK
+ 
+popd > /dev/null
+echo
+echo $DIRSTACK
