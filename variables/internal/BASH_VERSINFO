@@ -1,0 +1,12 @@
+#!/bin/bash
+
+vers_major=${BASH_VERSINFO[0]}
+vers_minor=${BASH_VERSINFO[1]}
+patch_level=${BASH_VERSINFO[2]}
+build_version=${BASH_VERSINFO[3]}
+release_status=${BASH_VERSINFO[4]}
+architecture=${BASH_VERSINFO[5]}
+
+echo '$BASH_VERSINFO[n]:' "$vers_major.$vers_minor.$patch_level($build_version)-$release_status $architecture"
+echo '$BASH_VERSION:    ' $BASH_VERSION
+
