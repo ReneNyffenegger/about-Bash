@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo '$EUID: ' $EUID
+grep $EUID  /etc/passwd
