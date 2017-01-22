@@ -1,0 +1,10 @@
+
+command_not_found_handle() {
+
+  echo command $1 was not found
+  shift
+  echo parameters were: $*
+
+}
+
+inexisting-command foo bar baz
