@@ -1,0 +1,18 @@
+#!/bin/bash
+
+A_VAR='foo'
+
+# With [[, unset/empty variables need not be
+# quoted:
+if [[ $A_VAR == $NOT_A_VAR ]]; then
+  echo "A_VAR == NOT_A_VAR"
+else
+  echo "A_VAR != NOT_A_VAR"
+fi
+
+# But the need to be quoted with "…" in [ constructs ]
+if [ $A_VAR == "$NOT_A_VAR" ]; then
+  echo "A_VAR == NOT_A_VAR"
+else
+  echo "A_VAR != NOT_A_VAR"
+fi
