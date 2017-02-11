@@ -1,0 +1,50 @@
+#!/bin/bash
+#
+#   The built-ins [ and test are equivalent, except that [ requires to be ended with a ]
+#
+
+if [ 0 ]; then
+   echo "0 is true"
+else
+   echo "0 is false"
+fi
+
+if [ 1 ]; then
+   echo "1 is true"
+else
+   echo "1 is false"
+fi
+
+if [ ]; then
+   echo "<null> is true"
+else
+   echo "<null> is false"
+fi
+
+# Same thing, with test
+
+if test 0; then
+   echo "0 is true"
+else
+   echo "0 is false"
+fi
+
+if test 1; then
+   echo "1 is true"
+else
+   echo "1 is false"
+fi
+
+if test; then
+   echo "<null> is true"
+else
+   echo "<null> is false"
+fi
+
+# !=
+
+if [    'foo' != 'bar' ]; then
+   echo 'foo  !=  bar'
+else
+   echo 'foo   =  bar'
+fi
