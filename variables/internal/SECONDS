@@ -9,3 +9,10 @@ sleep 2
 func
 sleep 3
 func
+
+# Output:
+#
+# This script has been running since 0 second(s)
+# This script has been running since 1 second(s)
+# This script has been running since 3 second(s)
+# This script has been running since 6 second(s)
