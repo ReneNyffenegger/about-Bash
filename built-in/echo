@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo
+echo ANSI escape sequences
+echo ---------------------
+
+NOCOL_="\e[0m"
+BOLD__="\e[1m"
+
+BLACK_="\e[30m"
+RED___="\e[31m"
+GREEN_="\e[32m"
+YELLOW="\e[33m"
+BLUE__="\e[34m"
+PINK__="\e[35m"
+CYAN__="\e[36m"
+WHITE_="\e[37m"
+
+function print_colored {
+  printf $1
+  printf "  %-8s"  $2
+  printf $BOLD__
+  echo -n $2
+  printf $NOCOL_
+  echo
+}
+
+print_colored $BLACK_  Black
+print_colored $RED___  Red
+print_colored $GREEN_  Green
+print_colored $YELLOW  Yellow
+print_colored $BLUE__  Blue
+print_colored $PINK__  Pink
+print_colored $CYAN__  Cyan
+print_colored $WHITE_  White
