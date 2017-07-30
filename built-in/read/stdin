@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo Read from stdin
+echo --------------
+echo 'Enter three words (on one line)'
+
+read w1 w2 w3
+
+echo The three words were:
+echo "  o  $w1"
+echo "  o  $w2"
+echo "  o  $w3"
