@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+#    read assignes w1, w2 and w3 to foo, bar
+#    and baz, respectively.
+#    However, since the read occurs in a subshell
+#    The following echo statements won't print
+#    the read variables for w1, w2 and w3:
+#
+echo "foo bar baz" | read w1 w2 w3
+echo $w1 - $w2 - $w3
+
+#
+#    A here string is evaluated in the
+#    same shell, so the read values v1, v2
+#    and v3 are available in the subsequent echo
+#    statement:
+#
+read v1 v2 v3 <<<"one two three"
+echo $v1 - $v2 - $v3
