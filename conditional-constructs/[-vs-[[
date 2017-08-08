@@ -12,7 +12,7 @@ else
 fi
 
 # But the need to be quoted with "…" in [ constructs ]
-if [ $A_VAR == "$NOT_A_VAR" ]; then
+if [ $A_VAR = "$NOT_A_VAR" ]; then # Note: == is not POSIX, it's a bashism
   echo "A_VAR == NOT_A_VAR"
 else
   echo "A_VAR != NOT_A_VAR"
@@ -27,8 +27,8 @@ else
 fi
 
 # But with [, the need be quoted.
-if [ "$CONTAINS_SPACES" == 'foo bar baz' ]; then
-  echo "CONTAINS_SPACES == foo bar baz"
+if [ "$CONTAINS_SPACES" = 'foo bar baz' ]; then # Note: == is not POSIX, it's a bashism
+  echo "CONTAINS_SPACES = foo bar baz"
 else
   echo "CONTAINS_SPACES != foo bar baz"
 fi
