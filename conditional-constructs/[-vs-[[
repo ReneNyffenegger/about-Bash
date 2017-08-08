@@ -1,6 +1,7 @@
 #!/bin/bash
 
 A_VAR='foo'
+CONTAINS_SPACES='foo bar baz'
 
 # With [[, unset/empty variables need not be
 # quoted:
@@ -15,4 +16,19 @@ if [ $A_VAR == "$NOT_A_VAR" ]; then
   echo "A_VAR == NOT_A_VAR"
 else
   echo "A_VAR != NOT_A_VAR"
+fi
+
+# With [[, variables that contain spaces need not
+# be quoted:
+if [[ $CONTAINS_SPACES == 'foo bar baz' ]]; then
+  echo "CONTAINS_SPACES == foo bar baz"
+else
+  echo "CONTAINS_SPACES != foo bar baz"
+fi
+
+# But with [, the need be quoted.
+if [ "$CONTAINS_SPACES" == 'foo bar baz' ]; then
+  echo "CONTAINS_SPACES == foo bar baz"
+else
+  echo "CONTAINS_SPACES != foo bar baz"
 fi
