@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+# if takes a command and acts depending on the command's
+# exit value.
+# The [ ] is not part of if, it IS a command
+# 
+
+if ./exit_0.sh; then
+  echo "Yes"
+else
+  echo "No"
+fi
+
+if ./exit_1.sh; then
+  echo "Yes"
+else
+  echo "No"
+fi
