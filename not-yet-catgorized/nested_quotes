@@ -1,0 +1,13 @@
+#!/isr/binb/bash
+
+FILENAME=nested_quotes
+echo "$(ls -l "$FILENAME") "
+
+#
+# The quotes are not nested like
+#    echo
+#   "$(ls -l "
+#    $FILENAME
+#   ") "
+# but as one would expect them.
+#
