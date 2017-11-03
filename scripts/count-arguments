@@ -1,0 +1,3 @@
+nof_arguments=$#
+
+echo The script was called with $nof_arguments arguments.
