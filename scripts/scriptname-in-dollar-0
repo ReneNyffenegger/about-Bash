@@ -1,0 +1,2 @@
+echo The name of the script is: $0
+echo The script is in the directory $(dirname $0)
