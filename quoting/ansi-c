@@ -6,4 +6,4 @@ echo $'one\ntwo\nthree\n\n'
 
 echo $'Hello Ren\xc3\xa9'
 #
-# Hello Renë
+# Hello René
