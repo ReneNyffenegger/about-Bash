@@ -6,6 +6,7 @@
 #         ./call-show-positional-arguments
 #         ./call-show-positional-arguments ""
 #         ./call-show-positional-arguments foo
+#         ./call-show-positional-arguments "" 'foo bar' baz 
 #
 #      etc.
 
@@ -15,7 +16,7 @@ echo calling show-positional-arguments with \$*
 echo calling show-positional-arguments with \"\$*\"
 ./show-positional-arguments "$*"
 
-echo calling show-positional-arguments with \"\@*\"
+echo calling show-positional-arguments with \"\$@\"
 ./show-positional-arguments "$@"
 
 # https://stackoverflow.com/a/743577/180275
