@@ -1,0 +1,9 @@
+echo $'one\ntwo\nthree\n\n'
+#
+# one
+# two
+# three
+
+echo $'Hello Ren\xc3\xa9'
+#
+# Hello Renë
