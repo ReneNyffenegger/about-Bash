@@ -1,13 +1,23 @@
 #
 # vim: ft=sh
 #
+#      Try to call the script with
+#
+#         ./call-show-positional-arguments
+#         ./call-show-positional-arguments ""
+#         ./call-show-positional-arguments foo
+#
+#      etc.
 
 echo calling show-positional-arguments with \$*
 ./show-positional-arguments $*
 
-echo calling show-positional-arguments with "\@*"
+echo calling show-positional-arguments with \"\$*\"
+./show-positional-arguments "$*"
+
+echo calling show-positional-arguments with \"\@*\"
 ./show-positional-arguments "$@"
 
 # https://stackoverflow.com/a/743577/180275
-echo calling show-positional-arguments with \${1+\$@}
-./show-positional-arguments ${1+$@}
+echo calling show-positional-arguments with \${1+\"\$@\"}
+./show-positional-arguments ${1+"$@"}
