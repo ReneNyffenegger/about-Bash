@@ -1,0 +1,21 @@
+
+
+case_() {
+
+    case $1 in
+      foo*|bar*   ) echo $1 matches 'foo*' or 'bar*' ;;
+      baz*        ) echo $1 matches 'baz*';;
+      *           ) echo $1 matches neither foo, bar or baz;;
+    esac
+
+}
+
+case_ foo
+case_ bar
+case_ baz
+case_ 42
+
+
+#
+# vim: ft=sh
+#
