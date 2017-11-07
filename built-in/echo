@@ -6,6 +6,8 @@ echo ---------------------
 
 NOCOL_="\e[0m"
 BOLD__="\e[1m"
+UNDERL="\e[4m"
+REVERS="\e[4m" # Swap foreground and background colors (sometimes underline?)
 
 BLACK_="\e[30m"
 RED___="\e[31m"
@@ -33,3 +35,5 @@ print_colored $BLUE__  Blue
 print_colored $PINK__  Pink
 print_colored $CYAN__  Cyan
 print_colored $WHITE_  White
+print_colored $UNDERL  Underln
+print_colored $REVERS  Revers
