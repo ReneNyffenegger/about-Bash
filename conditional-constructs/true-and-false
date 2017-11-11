@@ -1,0 +1,48 @@
+if (exit 0); then
+   echo exit 0 is true
+else
+   echo exit 0 is false
+fi
+# exit 0 is true
+
+if (exit 1); then
+   echo exit 1 is true
+else
+   echo exit 1 is false
+fi
+# exit 1 is false
+
+if [ ] ; then
+   echo empty is true
+else
+   echo empty is false
+fi
+# empty is false
+
+if [ " " ]; then
+   echo '" "' is true
+else
+   echo '" "' is false
+fi
+# " " is true
+
+if [ 0 ]; then
+   echo 0 is true
+else
+   echo 0 is false
+fi
+# 0 is true
+
+if [ 1 ]; then
+   echo 1 is true
+else
+   echo 1 is fale
+fi
+# 1 is true
+
+if [ foo ]; then
+   echo foo is true
+else
+   echo foo is false
+fi
+# foo is true
