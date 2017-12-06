@@ -1,0 +1,15 @@
+function check_num {
+  text="$@"
+# re_pattern='\d'     # does not work as intended.
+  re_pattern='[0-9]'
+
+
+  if [[ "$text" =~ $re_pattern ]]; then
+      printf "%-30s contains a number\n" "$text"
+  else
+      printf "%-30s does not contain a number\n" "$text"
+  fi
+}
+
+check_num hello world
+check_num The number is 42, as always
