@@ -1,0 +1,7 @@
+pattern='([0-9]+)[^[:digit:]]+([0-9]+)'
+text='foo 12345 bar 42 baz'
+
+if [[ $text =~ $pattern ]]; then
+  echo 1st number: ${BASH_REMATCH[1]}
+  echo 2nd number: ${BASH_REMATCH[2]}
+fi
