@@ -1,0 +1,13 @@
+
+echo "foo bar baz."
+
+#
+#  Waiting for the user to press any key
+#    -n 1: one character is enough
+#    -s  : suppress echoing the key that was pressed
+#    -p  : What should be prompted
+#
+#
+read -n 1 -s -p "Press any key to continue"
+
+echo "Continuing..."
