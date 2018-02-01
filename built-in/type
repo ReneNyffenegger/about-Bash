@@ -1,6 +1,0 @@
-#!/bin/bash
-type type
-# type is a shell builtin
-
-type [
-# [ is shell builtin
