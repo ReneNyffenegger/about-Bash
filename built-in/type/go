@@ -1,0 +1,25 @@
+tq84_var="some value"
+
+alias tq84_alias='ls -l'
+
+tq84_func() {
+  echo foo bar baz
+}
+
+type tq84_var
+#
+# bash: type: tq84_var: not found
+
+type tq84_array
+type tq84_alias
+#
+# tq84_alias is aliased to `ls -l'
+
+# Use -t to suppress definition of alias
+type -t tq84_alias
+#
+# alias
+
+type -t tq84_func
+#
+# function
