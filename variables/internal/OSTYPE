@@ -25,6 +25,10 @@ elif [[ "$OSTYPE" == "freebsd"* ]]; then
    #
          echo "Hm...???"
    #
+elif [[ "$OSTYPE" == "solaris"* ]]; then
+   #
+         echo "Well..."
+   #
 else
    #
          echo "Unknown OSTYPE $OSTYPE"
