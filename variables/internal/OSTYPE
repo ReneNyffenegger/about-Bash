@@ -4,6 +4,10 @@ if   [[ "$OSTYPE" == "linux-gnu" ]]; then
    #
          echo "Yeah!"
    #
+if   [[ "$OSTYPE" == "linux-android" ]]; then
+   #
+         echo "termux"
+   #
 elif [[ "$OSTYPE" == "darwin"* ]]; then
    #
          echo "Mac OSX"
@@ -21,13 +25,21 @@ elif [[ "$OSTYPE" == "win32" ]]; then
    #     Can OSTYPE ever be win32?
          echo "Windows"
    #
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
+elif [[ "$OSTYPE" == "freebsd" ]]; then
    #
          echo "Hm...???"
    #
-elif [[ "$OSTYPE" == "solaris"* ]]; then
+elif [[ "$OSTYPE" == "openbsd" ]]; then
+   #
+         echo "Hm...???"
+   #
+elif [[ "$OSTYPE" == "solaris" ]]; then
    #
          echo "Well..."
+   #
+elif [[ "$OSTYPE" == "haiku" ]]; then
+   #
+         echo "Well, well, well, the cat fell in the well"
    #
 else
    #
