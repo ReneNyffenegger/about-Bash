@@ -1,3 +1,32 @@
 #!/bin/bash
 
-echo $OSTYPE
+if   [[ "$OSTYPE" == "linux-gnu" ]]; then
+   #
+         echo "Yeah!"
+   #
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+   #
+         echo "Mac OSX"
+   #
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+   #
+         echo "POSIX environment emulation for Windows"
+   #
+elif [[ "$OSTYPE" == "msys" ]]; then
+   #
+         echo "Shell for MinGW"
+   #
+elif [[ "$OSTYPE" == "win32" ]]; then
+   # 
+   #     Can OSTYPE ever be win32?
+         echo "Windows"
+   #
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+   #
+         echo "Hm...???"
+   #
+else
+   #
+         echo "Unknown OSTYPE $OSTYPE"
+   #
+fi
