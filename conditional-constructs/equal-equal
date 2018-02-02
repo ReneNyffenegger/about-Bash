@@ -1,0 +1,19 @@
+# vim: ft=sh
+
+is_equal() {
+
+  val_1=$1
+  val_2=$2
+
+  if [ "$val_1" == "$val_2" ]; then
+    echo "$val_1 is equal $val_2"
+  else
+    echo "$val_1 is not equal $val_2"
+  fi
+
+}
+
+is_equal  FooBarBaz  Bar             # FooBarBaz is not equal Bar
+is_equal  FooBarBaz  FooBarBaz       # FooBarBaz is equal FooBarBaz
+is_equal  FooBarBaz  foobarbaz       # FooBarBaz is not equal foobarbaz
+is_equal "foo bar z"  "foo bar z"    # foo bar z is equal foo bar z
