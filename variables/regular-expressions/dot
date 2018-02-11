@@ -1,0 +1,13 @@
+check_at_least_three() {
+  local text="$1"
+
+  if [[ $text =~ ... ]]; then
+    echo $text is at least three characters long
+  else
+    echo $text is less than three characters long
+  fi
+}
+
+check_at_least_three ab
+check_at_least_three defg
+check_at_least_three "hi jk"
