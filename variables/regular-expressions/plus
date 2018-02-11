@@ -1,0 +1,14 @@
+check_two_adjacent_x() {
+  local text="$1"
+
+  if [[ $text =~ (x+) ]]; then
+    echo In $text, I found these xs: ${BASH_REMATCH[1]}
+  else
+    echo $text does not have any xs
+  fi
+}
+
+check_two_adjacent_x abcdef
+check_two_adjacent_x vwxyz
+check_two_adjacent_x rexx
+check_two_adjacent_x saxxxophone
