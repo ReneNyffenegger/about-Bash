@@ -2,5 +2,5 @@
 
 >&1 echo "This line goes to std out"
 >&1 echo "Another line that goes to std out"
->&2 echo "This line gos to std err"
+>&2 echo "This line goes to std err"
 >&1 echo "To std out, again"
