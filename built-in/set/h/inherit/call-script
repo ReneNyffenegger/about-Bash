@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set +h
+export SHELLOPTS
+
+./called-script
