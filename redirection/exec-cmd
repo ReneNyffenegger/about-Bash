@@ -1,6 +1,7 @@
 #!/bin/bash
 
-./cmd   >  stdout
-./cmd  2>  stderr
-./cmd  &>  stdout-and-stderr
-./cmd  >&  stdout-and-stderr.as-well
+./cmd  >       stdout
+./cmd  2>      stderr
+./cmd   >      stdout-and-stderr          2>&1
+./cmd  &>      stdout-and-stderr.too
+./cmd  >&      stdout-and-stderr.as-well
