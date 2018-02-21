@@ -1,0 +1,10 @@
+num_1=one
+num_2=two
+num_3=three
+num_4=four
+num_5=five
+
+the_num=num_2
+
+echo "The value of \$$the_num is ${!the_num}"
+# The value of $num_2 is two
