@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ 9  >  111 ]]; then echo "9   > 111"; else echo "9  <= 111"; fi  # 9   > 111
+if [[ 9 -gt 111 ]]; then echo "9 -gt 111"; else echo "9 -lt 111"; fi  # 9 -lt 111
+
+if [[ X  >  ABC ]]; then echo "X   > ABC"; else echo "X  <= ABC"; fi  # X   > ABC
+if [[ AB >    X ]]; then echo "AB >    X"; else echo "AB <=   X"; fi  # AB <=   X
