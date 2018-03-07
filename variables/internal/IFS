@@ -1,41 +1,55 @@
 #!/bin/bash
 
-echo ">$IFS<"
 
+#
+# The default value of $IFS consists of a space,
+# a tabulator and a new line.
+# This can be shown with 'cat -A' which prints ^I for
+# a tabulator and $ for a new linw
+#
+echo ">$IFS<" | cat -A
 echo
 
-echo $IFS | cat -vte
+# --------------------------------------------------------------
+#
+# Setting the IFS variable to specific character splits words
+# on this character
 
-# -------------
-
-echo
-var_plus='foo+bar+baz'
-var_minus='foo-bar-baz'
-
-IFS=+
-
-echo $var_plus
-echo $var_minus
-
-IFS=-
-
-echo $var_plus
-echo $var_minus
-
-# -------------
-
-echo
 
 IFS=:
 
 for word in "one:two::three"; do
    printf "word: %s\n" $word
 done
+echo
+
+# This can of course be used to decompose the individual
+# paths in $PATH
+for path in $PATH; do
+  echo path=$path
+done
+echo
+
+# --------------------------------------------------------------
+#
+# If IFS is set to +, the plus is "removed" (or split away) in
+# an echo statement
+
+IFS=+
+
+var_plus='foo+bar+baz'
+var_minus='foo-bar-baz'
+
+echo $var_plus
+echo $var_minus
 
 echo
+# --------------------------------------------------------------
+#
+# The space in IFS splits on one or more spaces.
 
 IFS=" "
 
-for word in "abc def  ghijk"; do
+for word in "abc def     ghijk"; do
    printf "word: %s\n" $word
 done
