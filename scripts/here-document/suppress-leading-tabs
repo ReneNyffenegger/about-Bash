@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cat <<-EOF
+  All lines in this here document
+  start with spaces.
+  
+  The dash in front of the EOF
+  does not remove them them.
+EOF
+
+echo -e "\n---------------\n"
+
+cat <<-EOF
+	The lines in this here document
+	start with a tabulator.
+	
+	The dash in front of the EOF
+	removes them.
+EOF
