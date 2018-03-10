@@ -1,0 +1,4 @@
+cat > /tmp/tq84.file << EOF
+Lorem ipsum dolor sit amet, consectetur
+adipiscing elit.
+EOF
