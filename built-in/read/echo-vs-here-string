@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-#    read assignes w1, w2 and w3 to foo, bar
+#    read assigns w1, w2 and w3 to foo, bar
 #    and baz, respectively.
 #    However, since the read occurs in a subshell
 #    The following echo statements won't print
