@@ -1,0 +1,9 @@
+# vi: ft=sh
+#
+for file in foo.txt bar.c baz.tar.gz; do
+    printf " %-14s %-8s %-8s\n" $file  ${file%.*} ${file%%.*}
+done
+#
+#  foo.txt        foo      foo     
+#  bar.c          bar      bar     
+#  baz.tar.gz     baz.tar  baz     
