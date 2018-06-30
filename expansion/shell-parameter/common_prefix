@@ -1,9 +1,5 @@
 #!/bin/bash
 
-city_one=Rome
-city_two=Paris
-city_three=London
-
 car_one=Mercedes
 car_two=BMW
 car_three=Porsche
