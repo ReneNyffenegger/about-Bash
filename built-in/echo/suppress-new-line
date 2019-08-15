@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+echo -n 'Writing '
+echo -n 'a '
+echo -n 'text '
+echo -n 'line '
+echo -n 'word '
+echo -n 'for '
+echo word.
