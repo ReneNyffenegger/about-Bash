@@ -3,7 +3,7 @@
 echo "PS1=
 echo /path/to/a/file.extension
 echo !-1:$:h   # head,                       expands to /path/to/a
-echo !-2:$:t   # tail,                       expands to /file.extension
+echo !-2:$:t   # tail,                       expands to file.extension
 echo !-3:$:r   # remove extension,           expands to /path/to/a/file
 echo !-4:$:e   # extension only,             expands to .extension
 echo !-5:$:t:r # Remove extension from tail, expands to file
